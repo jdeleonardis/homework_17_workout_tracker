@@ -35,7 +35,7 @@ module.exports = function(app) {
         });
     });    
 
-
+    //creating a new workout
     app.post("/api/workouts", ({body}, res) => {
         db.Workout.create(body)
         .then(dbWorkout => {
@@ -46,6 +46,7 @@ module.exports = function(app) {
         });
     });
 
+    //updating an existing workout
     app.put("/api/workouts/:id", (req, res) => {      
         // db.Workout.findByIdAndUpdate({"_id": mongojs.ObjectId(req.params.id)},{$set:{"exercises":req.body}}, (err, data) => {     
         db.Workout.findByIdAndUpdate({"_id": mongojs.ObjectId(req.params.id)},{$push: {"exercises":req.body}}, {new: true}, (err, data) => {                 

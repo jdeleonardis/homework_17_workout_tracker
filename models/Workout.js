@@ -19,6 +19,7 @@ WorkoutSchema.virtual("totalDuration").get(function(){
     return total + exercise.duration;
   }, 0);
 });
+
 // WorkoutSchema.methods.day = function() {
 //   this.day = Date.now();
 //   return this.day;

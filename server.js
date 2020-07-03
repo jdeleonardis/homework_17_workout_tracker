@@ -20,7 +20,11 @@ app.use(express.static("public"));
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+//commented out the initial connection code, and replaced with exact code in 
+//mongodb heroku deploy instructions, even though the code is nearly exactly the same.
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout"
+mongoose.connect(MONGODB_URI)
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
 // Start the server
 app.listen(PORT, () => {

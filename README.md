@@ -22,7 +22,15 @@ Some of the code of this homework has been given.  However, the api and html rou
 n/a
 
 ## Usage
-Open the following deployed website https://jdeleonards-homework17-workout.herokuapp.com/.  Additonally, a mongo database user has been created with username 'user1' and password 'password1'
+Open the following deployed website https://jdeleonards-homework17-workout.herokuapp.com/.
+
+If necessary, you can login to the mongo database using the following connection parameters
+
+address: ds037234.mlab.com
+port: 37234
+dbname: heroku_31wns1zz
+user: user1
+password: password1
 
 ## Contributors
 jdeleonardis
